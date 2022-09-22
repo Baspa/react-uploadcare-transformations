@@ -1,4 +1,4 @@
-LICEThe MIT License (MIT)
+The MIT License (MIT)
 
 Copyright (c) Bas van Dinther <hello@baspa.dev>
 
