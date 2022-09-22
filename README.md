@@ -87,6 +87,22 @@ const = () => {
 }
 ```
 
+### Auto rotate 
+The default behavior goes with parsing EXIF tags of original images and rotating them according to the “Orientation” tag. Using `false` as parameter allows turning off the default behavior. 
+  
+```jsx
+import { UCTransformation } from 'react-uploadcare-transformations'
+
+const = () => {
+  return (
+    <UCTransformation
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
+      autoRotate={false} // or true
+    />
+  )
+}
+```
+
 ### Preview
 Downscales an image proportionally to fit the given width and height in pixels.
 

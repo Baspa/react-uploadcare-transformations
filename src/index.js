@@ -17,6 +17,11 @@ export const UCTransformation = ({
   const generateUrl = () => {
     let newUrl = url
     for (const [key, value] of Object.entries(props)) {
+      // Auto rotate
+      if (key === 'autoRotate') {
+        newUrl = `${newUrl}/-/autorotate/${value ? 'yes' : 'no'}`
+      }
+
       // Preview
       if (key === 'preview') {
         newUrl = `${newUrl}/-/preview/${value.width}x${value.height}`
