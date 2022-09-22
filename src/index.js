@@ -16,10 +16,61 @@ export const UCTransformation = ({
 
   const generateUrl = () => {
     let newUrl = url
+
     for (const [key, value] of Object.entries(props)) {
       // Auto rotate
       if (key === 'autoRotate') {
         newUrl = `${newUrl}/-/autorotate/${value ? 'yes' : 'no'}`
+      }
+
+      // Blur faces
+      if (key === 'blurFaces') {
+        newUrl = `${newUrl}/-/blur_faces/${value}`
+      }
+
+      // Enhance
+      if (key === 'enhance') {
+        newUrl = `${newUrl}/-/enhance/${value}`
+      }
+
+      // Flip
+      if (key === 'flip') {
+        newUrl = `${newUrl}/-/flip`
+      }
+
+      // Format
+      if (key === 'format') {
+        newUrl = `${newUrl}/-/format/${value}`
+      }
+
+      // Gray scale
+      if (key === 'grayScale') {
+        newUrl = `${newUrl}/-/grayscale`
+      }
+
+      // Invert
+      if (key === 'invert') {
+        newUrl = `${newUrl}/-/invert`
+      }
+
+      // Mirror
+      if (key === 'mirror') {
+        newUrl = `${newUrl}/-/mirror`
+      }
+
+      // Progressive
+      if (key === 'progressive') {
+        newUrl = `${newUrl}/-/progressive/${value ? 'yes' : 'no'}`
+      }
+
+      // Quality
+      if (key === 'quality') {
+        newUrl = `${newUrl}/-/quality/${value}`
+      }
+
+      // Rotate
+      if (key === 'rotate') {
+        newUrl = `${newUrl}/-/rotate/${value}`
       }
 
       // Preview

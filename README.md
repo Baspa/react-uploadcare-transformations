@@ -103,6 +103,116 @@ const = () => {
 }
 ```
 
+### Blur faces 
+When faces is specified the regions are selected automatically by utilizing face detection.
+
+```jsx
+import { UCTransformation } from 'react-uploadcare-transformations'
+
+const = () => {
+  return (
+    <UCTransformation
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
+      blurFaces={50}
+    />
+  )
+}
+```
+### Enhance
+Auto-enhances an image by performing the following operations: auto levels, auto contrast, and saturation sharpening.
+
+Strength must be a number between 0 and 100. Default value is 50.
+  
+```jsx
+import { UCTransformation } from 'react-uploadcare-transformations'
+
+const = () => {
+  return (
+    <UCTransformation
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
+      enhance={50}
+    />
+  )
+}
+```
+### Flip
+Flips images.
+
+```jsx
+import { UCTransformation } from 'react-uploadcare-transformations'
+
+const = () => {
+  return (
+    <UCTransformation
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
+      flip
+    />
+  )
+}
+```
+### Format
+Converts an image to one of the following formats: `jpg`, `png`, `webp`, `auto`.
+
+```jsx
+import { UCTransformation } from 'react-uploadcare-transformations'
+
+const = () => {
+  return (
+    <UCTransformation
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
+      format={'jpg'}
+    />
+  )
+}
+```
+### Grayscale
+Desaturates images. The operation has no additional parameters and simply produces a grayscale image output when applied.
+
+```jsx
+import { UCTransformation } from 'react-uploadcare-transformations'
+
+const = () => {
+  return (
+    <UCTransformation
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
+      grayscale
+    />
+  )
+}
+```
+
+### Invert
+Inverts images rendering a 'negative' of the input.
+
+```jsx
+import { UCTransformation } from 'react-uploadcare-transformations'
+
+const = () => {
+  return (
+    <UCTransformation
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
+      invert
+    />
+  )
+}
+```
+
+### Mirror
+Mirrors images.
+
+```jsx
+
+import { UCTransformation } from 'react-uploadcare-transformations'
+
+const = () => {
+  return (
+    <UCTransformation
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
+      mirror
+    />
+  )
+}
+```
 ### Preview
 Downscales an image proportionally to fit the given width and height in pixels.
 
@@ -118,7 +228,53 @@ const = () => {
   )
 }
 ```
+### Progressive 
+Returns a progressive image. In progressive images, data are compressed in multiple passes of progressively higher detail. The operation does not affect non-JPEG images; does not force image formats to JPEG.
 
+```jsx
+import { UCTransformation } from 'react-uploadcare-transformations'
+
+const = () => {
+  return (
+    <UCTransformation
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
+      progressive={true} // or false
+    />
+  )
+}
+```
+### Quality
+Sets output JPEG and WebP quality. Since actual settings vary from codec to codec, and more importantly, from format to format, we provide five simple tiers and two automatic values which suits most cases of image distribution and are consistent.
+
+Quality must be one of the following values: `smart`, `smart_retina`, `normal`, `better`, `best`, `lighter`, `lightest`.
+
+```jsx
+import { UCTransformation } from 'react-uploadcare-transformations'
+
+const = () => {
+  return (
+    <UCTransformation
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
+      quality={'best'}
+    />
+  )
+}
+```
+### Rotate
+Right-angle image rotation, counterclockwise. The value of angle must be a multiple of 90.
+
+```jsx
+import { UCTransformation } from 'react-uploadcare-transformations'
+
+const = () => {
+  return (
+    <UCTransformation
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
+      rotate={90}
+    />
+  )
+}
+```
 ### Set fill 
 Sets the fill color used with crop, stretch or when converting an alpha channel enabled image to JPEG.
 
