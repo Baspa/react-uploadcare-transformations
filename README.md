@@ -73,6 +73,8 @@ const = () => {
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       preview={{ width: 300, height: 300 }}
     />
+  )
+}
 ```
 
 
