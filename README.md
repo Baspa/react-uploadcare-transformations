@@ -8,12 +8,13 @@ Show images that are transformed with [Uploadcare](https://uploadcare.com/?via=v
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Documentation](#documentation)
+  * [Adding filename](#adding-filename)
   * [Preview](#preview)
   * [Set fill](#set-fill)
   * [Sharpen](#sharpen)
   * [Smart resize](#smart-resize)
   * [Zoom objects](#zoom-objects)
-- [Documentation](#documentation)
 - [Testing](#testing)
 - [Changelog](#changelog)
 - [Contributing](#contributing)
@@ -66,6 +67,25 @@ export default App
 ```
 
 ## Documentation
+
+### Adding filename
+Original filenames can be accessed via Uploadcare's REST API. This can be done by making a request to receive a JSON response with file parameters including `original_filename`.
+
+You can set an optional filename that users will see instead of the original name:
+
+```jsx
+import { UCTransformation } from 'react-uploadcare-transformations'
+
+const = () => {
+  return (
+    <UCTransformation
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
+      filename='my-image.jpg'
+      preview={{ width: 300, height: 300 }}
+    />
+  )
+}
+```
 
 ### Preview
 Downscales an image proportionally to fit the given width and height in pixels.

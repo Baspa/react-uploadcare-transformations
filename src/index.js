@@ -43,6 +43,10 @@ export const UCTransformation = ({
       }
     }
 
+    if (filename) {
+      return `${newUrl}/${filename}`
+    }
+
     return `${newUrl}/`
   }
 
