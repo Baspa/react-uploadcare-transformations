@@ -32,7 +32,7 @@ npm install --save react-uploadcare-transformations
 
 <ol>
     <li>
-        Include the `UCTransformation` component.
+        Include the <code>UCTransformation</code> component.
     </li>
      <li>
         Get the UUID of the file you want to show.
@@ -43,7 +43,7 @@ npm install --save react-uploadcare-transformations
      <li>
         Create the transformation URL by adding one or more transformations to the component. Simply add an object with the correct values. You can add as much transformation methods as you want. 
     </li>
-    <li>The component outputs an image. Want to add your own classes to the image? Simply add the `class` property!</li>
+    <li>The component outputs an image. Want to add your own classes to the image? Simply add the <code>classname</code> property!</li>
 </ol>
 
 ```jsx
