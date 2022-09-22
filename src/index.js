@@ -19,31 +19,31 @@ export const UCTransformation = ({
     for (const [key, value] of Object.entries(props)) {
       // Preview
       if (key === 'preview') {
-        newUrl = `${newUrl}/-/preview/${value.width}x${value.height}/`
+        newUrl = `${newUrl}/-/preview/${value.width}x${value.height}`
       }
 
       // Set fill
       if (key === 'setFill') {
-        newUrl = `${newUrl}/-/setfill/${value.color}/`
+        newUrl = `${newUrl}/-/setfill/${value.color}`
       }
 
       // Sharpen
       if (key === 'sharpen') {
-        newUrl = `${newUrl}/-/sharp/${value}/`
+        newUrl = `${newUrl}/-/sharp/${value}`
       }
 
       // Smart resize
       if (key === 'smartResize') {
-        newUrl = `${newUrl}/-/smart_resize/${value.width}x${value.height}/`
+        newUrl = `${newUrl}/-/smart_resize/${value.width}x${value.height}`
       }
 
       // Zoom objects
       if (key === 'zoomObjects') {
-        newUrl = `${newUrl}/-/zoom_objects/${value}/`
+        newUrl = `${newUrl}/-/zoom_objects/${value}`
       }
     }
 
-    return `${newUrl}`
+    return `${newUrl}/`
   }
 
   return <img src={generateUrl()} className={classname} />
