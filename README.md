@@ -100,9 +100,7 @@ const = () => {
 ```
 
 ### Sharpen
-Sets the fill color used with crop, stretch or when converting an alpha channel enabled image to JPEG.
-
-Color must be a hex color code <b>without using the hashtag</b>.
+Sharpens an image, might be especially useful with images that were subjected to downscaling. strength can be in the range from 0 to 20 and defaults to the value of 5.
 
 ```jsx
 import { UCTransformation } from 'react-uploadcare-transformations'
