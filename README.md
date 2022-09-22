@@ -34,6 +34,10 @@ Show images that are transformed using [Uploadcare](https://uploadcare.com/?via=
 
 ## Requirements
 
+- [React](https://reactjs.org/) 16.8.0 or higher
+- [Uploadcare](https://uploadcare.com/?via=vk10) account
+- [Node.js](https://nodejs.org/en/) 10.0.0 or higher
+
 ## Installation
 
 ```bash
