@@ -70,7 +70,7 @@ import { UCImage } from 'react-uploadcare-transformations'
 const App = () => {
   return (
     <UCImage
-      uuid='83c3bad4-b4bc-4cea-8702-88ee61b0b015'
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       preview={{ width: 300, height: 300 }}
       setFill={{ color: 'ff0000' }}
     />
