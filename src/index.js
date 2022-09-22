@@ -25,7 +25,7 @@ export const UCTransformation = ({
 
       // Blur faces
       if (key === 'blurFaces') {
-        newUrl = `${newUrl}/-/blur_faces/${value}`
+        newUrl = `${newUrl}/-/blur_region/faces/${value}`
       }
 
       // Enhance
@@ -44,7 +44,7 @@ export const UCTransformation = ({
       }
 
       // Gray scale
-      if (key === 'grayScale') {
+      if (key === 'grayscale') {
         newUrl = `${newUrl}/-/grayscale`
       }
 
