@@ -10,10 +10,20 @@ Show images that are transformed with [Uploadcare](https://uploadcare.com/?via=v
 - [Usage](#usage)
 - [Documentation](#documentation)
   * [Adding filename](#adding-filename)
+  * [Auto rotate](#auto-rotate)
+  * [Blur faces](#blur-faces)
+  * [Enhance](#enhance)
+  * [Flip](#flip)
+  * [Format](#format)
+  * [Grayscale](#grayscale)
+  * [Invert](#invert)
+  * [Miror](#miror)
   * [Preview](#preview)
+  * [Progressive](#progressive)
+  * [Quality](#quality)
+  * [Rotate](#rotate)
   * [Set fill](#set-fill)
   * [Sharpen](#sharpen)
-  * [Smart resize](#smart-resize)
   * [Zoom objects](#zoom-objects)
 - [Testing](#testing)
 - [Changelog](#changelog)
@@ -65,6 +75,29 @@ const App = () => {
 
 export default App
 ```
+
+### List of possible transformations
+Each transformation follows the documentation on Uploadcare which you may find <a href="https://uploadcare.com/docs/">here</a>. 
+The current list of possible transformations and where to find the documentation:
+
+| Transformation        | Uploadcare Documentation link           |
+| ------------- |:-------------:|
+| [Auto rotate](#auto-rotate)      | <a target="_blank" href="https://uploadcare.com/docs/transformations/image/rotate-flip/#operation-autorotate">Link</a> |
+| [Blur faces](#blur-faces) | <a target="_blank" href="https://uploadcare.com/docs/transformations/image/blur-sharpen/#operation-blur-region-faces">Link</a>      |
+| [Enhance](#enhance) | <a target="_blank" href="https://uploadcare.com/docs/transformations/image/colors/#operation-enhance">Link</a>      |
+| [Flip](#flip) | <a target="_blank" href="https://uploadcare.com/docs/transformations/image/colors/#operation-flip">Link</a>      |
+| [Format](#format) | <a target="_blank" href="https://uploadcare.com/docs/transformations/image/compression/#operation-format">Link</a>      |
+| [Grayscale](#grayscale) | <a target="_blank" href="https://uploadcare.com/docs/transformations/image/colors/#operation-grayscale">Link</a>      |
+| [Invert](#invert) | <a target="_blank" href="https://uploadcare.com/docs/transformations/image/colors/#operation-inverting">Link</a>      |
+| [Miror](#miror) | <a target="_blank" href="https://uploadcare.com/docs/transformations/image/colors/#operation-mirror">Link</a>      |
+| [Preview](#preview) | <a target="_blank" href="https://uploadcare.com/docs/transformations/image/resize-crop/#operation-preview">Link</a>      |
+| [Progressive](#progressive) | <a target="_blank" href="https://uploadcare.com/docs/transformations/image/compression/#operation-progressive">Link</a>      |
+| [Quality](#quality) | <a target="_blank" href="https://uploadcare.com/docs/transformations/image/compression/#operation-quality">Link</a>      |
+| [Rotate](#rotate) | <a target="_blank" href="https://uploadcare.com/docs/transformations/image/colors/#operation-rotate">Link</a>      |
+| [Set fill](#set-fill) | <a target="_blank" href="https://uploadcare.com/docs/transformations/image/resize-crop/#operation-setfill">Link</a>      |
+| [Sharpen](#sharpen) | <a target="_blank" href="https://uploadcare.com/docs/transformations/image/colors/#operation-sharpen">Link</a>      |
+| [Smart resize](#smart-resize) | <a target="_blank" href="https://uploadcare.com/docs/transformations/image/resize-crop/#operation-smart-resize">Link</a>      |
+| [Zoom objects](#zoom-objects) | <a target="_blank" href="https://uploadcare.com/docs/transformations/image/resize-crop/#operation-zoom-objects">Link</a>      |
 
 ## Documentation
 
