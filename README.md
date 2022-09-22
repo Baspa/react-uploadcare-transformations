@@ -50,7 +50,7 @@ import { UCTransformation } from 'react-uploadcare-transformations'
 const App = () => {
   return (
     <UCTransformation
-      uuid='83c3bad4-b4bc-4cea-8702-88ee61b0b015'
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       preview={{ width: 300, height: 300 }}
     />
   )
@@ -60,6 +60,21 @@ export default App
 ```
 
 ## Documentation
+
+### Preview
+Downscales an image proportionally to fit the given width and height in pixels.
+
+```jsx
+import { UCTransformation } from 'react-uploadcare-transformations'
+
+const = () => {
+  return (
+    <UCTransformation
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
+      preview={{ width: 300, height: 300 }}
+    />
+```
+
 
 ## Changelog
 
