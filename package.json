@@ -1,7 +1,7 @@
 {
   "name": "react-uploadcare-transformations",
-  "version": "1.0.0",
-  "description": "A React component that lets you create Uploadcare transformation urls easily. ",
+  "version": "0.1.0",
+  "description": "A React component that lets you create images with Uploadcare transformation urls very easily.",
   "author": "Baspa",
   "license": "MIT",
   "repository": "Baspa/react-uploadcare-transformations",
@@ -11,6 +11,14 @@
   "engines": {
     "node": ">=10"
   },
+  "keywords": [
+    "react",
+    "uploadcare",
+    "transformations",
+    "image-processing",
+    "image",
+    "url"
+  ],
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
