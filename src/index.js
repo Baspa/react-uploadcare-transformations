@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import styles from './styles.module.css'
 
 export const UCTransformation = ({
   uuid,
   cdn = 'https://ucarecdn.com/',
   filename,
+  classname,
   ...props
 }) => {
   const [url, setUrl] = React.useState('')
@@ -46,5 +46,5 @@ export const UCTransformation = ({
     return `${newUrl}`
   }
 
-  return <img src={generateUrl()} className={styles.image} />
+  return <img src={generateUrl()} className={classname} />
 }
