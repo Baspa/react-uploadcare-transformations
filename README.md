@@ -8,6 +8,10 @@ A React component which provides an easy way to add Uploadcare transformations t
 - [Installation](#installation)
 - [Usage](#usage)
   * [Preview](#preview)
+  * [Set fill](#set-fill)
+  * [Sharpen](#sharpen)
+  * [Smart resize](#smart-resize)
+  * [Zoom objects](#zoom-objects)
 - [Documentation](#documentation)
 - [Testing](#testing)
 - [Changelog](#changelog)
@@ -76,6 +80,78 @@ const = () => {
   )
 }
 ```
+
+### Set fill 
+Sets the fill color used with crop, stretch or when converting an alpha channel enabled image to JPEG.
+
+Color must be a hex color code <b>without using the hashtag</b>.
+
+```jsx
+import { UCTransformation } from 'react-uploadcare-transformations'
+
+const = () => {
+  return (
+    <UCTransformation
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
+      setFill={{ color: 'ffffff' }}
+    />
+  )
+}
+```
+
+### Sharpen
+Sets the fill color used with crop, stretch or when converting an alpha channel enabled image to JPEG.
+
+Color must be a hex color code <b>without using the hashtag</b>.
+
+```jsx
+import { UCTransformation } from 'react-uploadcare-transformations'
+
+const = () => {
+  return (
+    <UCTransformation
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
+      sharpen={20}
+    />
+  )
+}
+```
+
+### Smart resize 
+Content-aware resize helps retaining original proportions of faces and other visually sensible objects while resizing the rest of the image using intelligent algorithms.
+
+```jsx
+import { UCTransformation } from 'react-uploadcare-transformations'
+
+const = () => {
+  return (
+    <UCTransformation
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
+      smartResize={{ width: 300, height: 300 }}
+    />
+  )
+}
+```
+
+### Zoom objects
+Zoom objects operation is best suited for images with solid or uniform backgrounds.
+
+Zoom must be a number between 1 and 100.
+
+```jsx
+import { UCTransformation } from 'react-uploadcare-transformations'
+
+const = () => {
+  return (
+    <UCTransformation
+      uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
+      zoomObjects={50}
+    />
+  )
+}
+```
+
+
 
 
 ## Changelog
