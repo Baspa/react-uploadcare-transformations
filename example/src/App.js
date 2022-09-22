@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { ExampleComponent } from 'react-uploadcare-transformations'
+import { UCTransformation } from 'react-uploadcare-transformations'
 import 'react-uploadcare-transformations/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <UCTransformation uuid='abc' preview={{ width: 300, height: 300 }} />
 }
 
 export default App
