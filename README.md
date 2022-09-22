@@ -4,6 +4,8 @@
 
 Show images that are transformed using [Uploadcare](https://uploadcare.com/?via=vk10) image processing URLs. No need to write or generate the URL yourself. Just pass the UUID of the file, optionally pass the custom CDN and add the transformations - through attributes - you want to apply and the React component generates the image for you.
 
+> This package is inspired by the [PHP Uploadcare Transformations](https://github.com/vormkracht10/php-uploadcare-transformations) package. Be sure to check that out when using PHP. At this moment it has 13 more transformations available than this package, those will be available in this package soon. 
+
 
 - [Requirements](#requirements)
 - [Installation](#installation)
