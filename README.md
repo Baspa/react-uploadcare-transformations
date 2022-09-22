@@ -2,7 +2,7 @@
 
 [![NPM](https://img.shields.io/npm/v/react-uploadcare-transformations.svg)](https://www.npmjs.com/package/react-uploadcare-transformations) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-Show images that are transformed with [Uploadcare](https://uploadcare.com/?via=vk10) image processing URLs. No need to write or generate the URL yourself. Just pass the UUID of the file, optionally pass the custom CDN and add the transformations - through attributes - you want to apply and the React component generates the image for you.
+Show images that are transformed using [Uploadcare](https://uploadcare.com/?via=vk10) image processing URLs. No need to write or generate the URL yourself. Just pass the UUID of the file, optionally pass the custom CDN and add the transformations - through attributes - you want to apply and the React component generates the image for you.
 
 
 - [Requirements](#requirements)
@@ -44,7 +44,7 @@ npm install --save react-uploadcare-transformations
 
 <ol>
     <li>
-        Include the <code>UCTransformation</code> component.
+        Include the <code>UCImage</code> component.
     </li>
      <li>
         Get the UUID of the file you want to show.
@@ -61,11 +61,11 @@ npm install --save react-uploadcare-transformations
 ```jsx
 import React from 'react'
 
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const App = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='83c3bad4-b4bc-4cea-8702-88ee61b0b015'
       preview={{ width: 300, height: 300 }}
       setFill={{ color: 'ff0000' }}
@@ -107,11 +107,11 @@ Original filenames can be accessed via Uploadcare's REST API. This can be done b
 You can set an optional filename that users will see instead of the original name:
 
 ```jsx
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       filename='my-image.jpg'
       preview={{ width: 300, height: 300 }}
@@ -124,11 +124,11 @@ const = () => {
 The default behavior goes with parsing EXIF tags of original images and rotating them according to the “Orientation” tag. Using `false` as parameter allows turning off the default behavior. 
   
 ```jsx
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       autoRotate={false} // or true
     />
@@ -140,11 +140,11 @@ const = () => {
 When faces is specified the regions are selected automatically by utilizing face detection.
 
 ```jsx
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       blurFaces={50}
     />
@@ -157,11 +157,11 @@ Auto-enhances an image by performing the following operations: auto levels, auto
 Strength must be a number between 0 and 100. Default value is 50.
   
 ```jsx
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       enhance={50}
     />
@@ -172,11 +172,11 @@ const = () => {
 Flips images.
 
 ```jsx
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       flip
     />
@@ -187,11 +187,11 @@ const = () => {
 Converts an image to one of the following formats: `jpg`, `png`, `webp`, `auto`.
 
 ```jsx
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       format={'jpg'}
     />
@@ -202,11 +202,11 @@ const = () => {
 Desaturates images. The operation has no additional parameters and simply produces a grayscale image output when applied.
 
 ```jsx
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       grayscale
     />
@@ -218,11 +218,11 @@ const = () => {
 Inverts images rendering a 'negative' of the input.
 
 ```jsx
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       invert
     />
@@ -235,11 +235,11 @@ Mirrors images.
 
 ```jsx
 
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       mirror
     />
@@ -250,11 +250,11 @@ const = () => {
 Downscales an image proportionally to fit the given width and height in pixels.
 
 ```jsx
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       preview={{ width: 300, height: 300 }}
     />
@@ -265,11 +265,11 @@ const = () => {
 Returns a progressive image. In progressive images, data are compressed in multiple passes of progressively higher detail. The operation does not affect non-JPEG images; does not force image formats to JPEG.
 
 ```jsx
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       progressive={true} // or false
     />
@@ -282,11 +282,11 @@ Sets output JPEG and WebP quality. Since actual settings vary from codec to code
 Quality must be one of the following values: `smart`, `smart_retina`, `normal`, `better`, `best`, `lighter`, `lightest`.
 
 ```jsx
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       quality={'best'}
     />
@@ -297,11 +297,11 @@ const = () => {
 Right-angle image rotation, counterclockwise. The value of angle must be a multiple of 90.
 
 ```jsx
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       rotate={90}
     />
@@ -314,11 +314,11 @@ Sets the fill color used with crop, stretch or when converting an alpha channel 
 Color must be a hex color code <b>without using the hashtag</b>.
 
 ```jsx
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       setFill={{ color: 'ffffff' }}
     />
@@ -330,11 +330,11 @@ const = () => {
 Sharpens an image, might be especially useful with images that were subjected to downscaling. strength can be in the range from 0 to 20 and defaults to the value of 5.
 
 ```jsx
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       sharpen={20}
     />
@@ -346,11 +346,11 @@ const = () => {
 Content-aware resize helps retaining original proportions of faces and other visually sensible objects while resizing the rest of the image using intelligent algorithms.
 
 ```jsx
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       smartResize={{ width: 300, height: 300 }}
     />
@@ -364,11 +364,11 @@ Zoom objects operation is best suited for images with solid or uniform backgroun
 Zoom must be a number between 1 and 100.
 
 ```jsx
-import { UCTransformation } from 'react-uploadcare-transformations'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='12a3456b-c789-1234-1de2-3cfa83096e25'
       zoomObjects={50}
     />

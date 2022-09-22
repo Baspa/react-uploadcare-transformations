@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-export const UCTransformation = ({
+export const UCImage = ({
   uuid,
   cdn = 'https://ucarecdn.com/',
   filename,
