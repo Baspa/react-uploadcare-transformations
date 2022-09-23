@@ -1,10 +1,11 @@
 import * as React from 'react'
 import { transformationFinder } from './utils/transformations'
+
 interface Props {
   uuid: string
   cdn?: string
-  filename: string
-  classname: string
+  filename: any
+  classname: any
   [key: string]: any
 }
 
