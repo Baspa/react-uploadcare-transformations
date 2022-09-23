@@ -44,6 +44,8 @@ Show images that are transformed using [Uploadcare](https://uploadcare.com/?via=
 
 ```bash
 npm install --save react-uploadcare-transformations
+# or 
+yarn add react-uploadcare-transformations 
 ```
 
 ## Usage
