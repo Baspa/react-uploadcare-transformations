@@ -1,6 +1,10 @@
 # react-uploadcare-transformations
 
-[![NPM](https://img.shields.io/npm/v/react-uploadcare-transformations.svg)](https://www.npmjs.com/package/react-uploadcare-transformations) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)![npm](https://img.shields.io/npm/dt/react-uploadcare-transformations)
+[![NPM](https://img.shields.io/npm/v/react-uploadcare-transformations.svg)](https://www.npmjs.com/package/react-uploadcare-transformations) 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+![npm](https://img.shields.io/npm/dt/react-uploadcare-transformations)
+![node-current](https://img.shields.io/node/v/react-uploadcare-transformations)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/baspa/react-uploadcare-transformations/CodeQL)
 
 Show images that are transformed using [Uploadcare](https://uploadcare.com/?via=vk10) image processing URLs. No need to write or generate the URL yourself. Just pass the UUID of the file, optionally pass the custom CDN and add the transformations - through attributes - you want to apply and the React component generates the image for you.
 
