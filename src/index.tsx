@@ -1,5 +1,13 @@
-import React, { useEffect } from 'react'
-import { transformationFinder } from './transformations'
+import * as React from 'react'
+import { transformationFinder } from './utils/transformations'
+
+interface Props {
+  uuid: string
+  cdn?: string
+  filename: any
+  classname: any
+  [key: string]: any
+}
 
 export const UCImage = ({
   uuid,
@@ -7,21 +15,10 @@ export const UCImage = ({
   filename,
   classname,
   ...props
-}) => {
-  const [url, setUrl] = React.useState('')
+}: Props) => {
 
-  // Set base URL on initiazation
-  useEffect(() => {
-    setUrl(`${cdn}${uuid}`)
-  }, [uuid, cdn])
-
-  /**
-   * Generate URL with transformations
-   *
-   * @returns {string} - The final URL with all transformations applied
-   */
-  const generateUrl = () => {
-    let ucUrl = url
+  function generateUrl() {
+    let ucUrl = `${cdn}${uuid}/`
 
     // Loop through all props and find the transformation
     for (const [key, value] of Object.entries(props)) {
@@ -36,6 +33,6 @@ export const UCImage = ({
 
     return `${ucUrl}/`
   }
-
+  
   return <img src={generateUrl()} className={classname} />
 }

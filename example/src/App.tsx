@@ -1,11 +1,10 @@
 import React from 'react'
 
-import { UCTransformation } from 'react-uploadcare-transformations'
-import 'react-uploadcare-transformations/dist/index.css'
+import { UCImage } from 'react-uploadcare-transformations'
 
 const App = () => {
   return (
-    <UCTransformation
+    <UCImage
       uuid='83c3bad4-b4bc-4cea-8702-88ee61b0b015'
       preview={{ width: 300, height: 300 }}
       setFill={{ color: 'ff0000' }}
@@ -14,3 +13,4 @@ const App = () => {
 }
 
 export default App
+
