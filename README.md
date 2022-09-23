@@ -50,21 +50,11 @@ yarn add react-uploadcare-transformations
 
 ## Usage
 
-<ol>
-    <li>
-        Include the <code>UCImage</code> component.
-    </li>
-     <li>
-        Get the UUID of the file you want to show.
-    </li>
-     <li>
-        Set your CDN url (optional).
-    </li>
-     <li>
-        Create the transformation URL by adding one or more transformations to the component. Simply add an object with the correct values. You can add as much transformation methods as you want. 
-    </li>
-    <li>The component outputs an image. Want to add your own classes to the image? Simply add the <code>classname</code> property!</li>
-</ol>
+1.  Include the `UCImage` component.
+2.  Get the UUID of the file you want to show.
+3.  Set your CDN url (optional).
+4.  Create the transformation URL by adding one or more transformations to the component. Simply add an object with the correct values. You can add as much transformation methods as you want.
+5.  The component outputs an image. Want to add your own classes to the image? Simply add the `classname` property!
 
 ```jsx
 import React from 'react'
@@ -383,10 +373,6 @@ const = () => {
   )
 }
 ```
-
-
-
-
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
